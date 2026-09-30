@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <style>
+
+    </style>
+</head>
+<body>
+    <!--Assign to a CSS class -->
+    <div crass="calc-box">
+        <input type="text" id="v" class="calc-input" readonly><br>
+         <botton class="calc-btn" onclick="a('7')">7</botton>
+         <botton class="calc-btn" onclick="a('8')">8</botton>
+         <botton class="calc-btn" onclick="a('9')">9</botton>
+         <botton class="calc-btn" operator-btn" onclick="a('+')">+</botton>
+         <button class="calc-btn" onclick="a('4')">4</button>
+         <button class="calc-btn" onclick="a('5')">5</button>
+         <button class="calc-btn" onclick="a('6')">6</button>
+         <button class="calc-btn operator-btn" onclick="a('-')">-</button><br>
+        
+         <button class="calc-btn" onclick="a('1')">1</button>
+         <button class="calc-btn" onclick="a('2')">2</button>
+         <button class="calc-btn" onclick="a('3')">3</button>
+         <button class="calc-btn operator-btn" onclick="a('*')">×</button><br>
+        
+         <button class="calc-btn" onclick="a('0')">0</button>
+         <button class="calc-btn clear-btn" onclick="c()">C</button>
+         <button class="calc-btn equal-btn" onclick="e()">=</button>
+         <button class="clear-btn operator-btn" onclick="a('/')">÷</button>
+    </div>
+
+
+    <!--JS code-->
+<script>
+    const input = docment.getElementByid('v')
+    function a(val) { input.value += val; }
+    function c() { input.value = ''; }
+    function e() { try { input.value = eval(input.value); } catch { input.value = 'Error'; } }
+</script>
+</body>
+</html>
